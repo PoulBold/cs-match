@@ -1,0 +1,15 @@
+baseURL = 'https://cs-match.com/'
+languageCode = "en-us"
+title = "CS Match"
+theme = "FixIt"
+
+enableRobotsTXT = true
+
+[pagination]
+pagerSize = 10
+
+[taxonomies]
+category = "categories"
+tag      = "tags"
+
+buildFuture = true
