@@ -1,7 +1,7 @@
 baseURL = 'https://cs-match.com/'
 languageCode = "en-us"
 title = "CS Match"
-theme = "FixIt"
+theme = "Mainroad"
 
 enableRobotsTXT = true
 
