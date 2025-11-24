@@ -1,15 +1,102 @@
 baseURL = 'https://cs-match.com/'
 languageCode = "en-us"
-title = "CS Match"
+title = "Book Review CSM"
 theme = "Mainroad"
+#publishDir = "docs"
 
-enableRobotsTXT = true
-
+# Кол-во постов на странице
 [pagination]
 pagerSize = 10
+
+# Разрешать публикацию будущих дат (полезно для планирования)
+buildFuture = true
+
+# SEO / индексация
+canonifyURLs = true
+enableRobotsTXT = true
+
+[markup.goldmark.renderer]
+unsafe = true
 
 [taxonomies]
 category = "categories"
 tag      = "tags"
 
-buildFuture = true
+[params.author]
+name = "Your Name"
+bio  = "Author, publisher and creator of Book Review System."
+
+[Params]
+# Текст под логотипом / названием
+subtitle     = "Ethical strategies to get more Amazon reviews"
+description  = "Book Review System helps authors and FBA sellers get more ethical, Amazon-compliant reviews with practical guides, case studies, and tools."
+keywords     = "amazon book reviews, kdp reviews, fba reviews, get amazon reviews, book review system"
+
+# Включаем SEO-шаблоны темы
+opengraph    = true
+twitter_cards = true
+schema       = true
+
+# UX-настройки
+readmore        = true              # Кнопка Read more в списках
+authorbox       = true              # Бокс автора под постом
+post_navigation = true              # Prev / Next посты
+
+# Что показывать в мета-блоке под заголовком поста
+post_meta = ["author", "date", "categories", "translations"]
+
+# Из каких секций брать посты для главной и виджета "Recent"
+postSections = ["post"]
+
+# Логотип в шапке
+[Params.logo]
+title    = "Book Review System"
+subtitle = "Get more ethical Amazon reviews"
+
+# Цвета темы (акцентный цвет)
+[Params.style.vars]
+highlightColor = "#ff9900"          # В духе Amazon, можно поменять
+
+# Отображение миниатюр
+[Params.thumbnail]
+visibility = ["list", "post"]       # Показывать и в списках, и внутри поста
+
+# 🔹 Сайдбар + виджеты (это убирает WARNING)
+[Params.sidebar]
+home   = "right"                    # Сайдбар справа на главной
+list   = "right"                    # Сайдбар в списках категорий/тегов
+single = "right"                    # Сайдбар внутри статей
+# Включаем виджеты и задаём их порядок
+widgets = ["search", "recent", "categories", "taglist", "social"]
+
+# Настройки самих виджетов
+[Params.widgets]
+recent_num         = 5              # Сколько постов в "Recent articles"
+categories_counter = true           # Счётчик постов в категориях
+tags_counter       = false          # Можно включить, если нужно
+
+# Соцсети в виджете "social"
+email     = "info@cs-match.com"
+
+# (опционально) Главное меню, если нужно
+[menu]
+
+[[menu.main]]
+name   = "Home"
+url    = "/"
+weight = 10
+
+[[menu.main]]
+name   = "Articles"
+url    = "/articles/"
+weight = 20
+
+[[menu.main]]
+name   = "Categories"
+url    = "/categories/"
+weight = 30
+
+[[menu.main]]
+name   = "Tags"
+url    = "/tags/"
+weight = 40
